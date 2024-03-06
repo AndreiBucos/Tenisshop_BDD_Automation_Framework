@@ -8,10 +8,10 @@ from pages.base_page import Base_Page
 
 
 class LoginPage(Base_Page):
-    EMAIL_INPUT = (By.NAME, 'login[credentials]')
+    EMAIL_INPUT = (By.NAME, 'login[credentials]') #_loginEmail
     PASSWORD_INPUT = (By.NAME, 'login[password]')
-    LOGIN_BUTTON = (By.XPATH, '//button[@id="send2"]')
-    FORGOT_PASSWORD_LINK = (By.LINK_TEXT, "Ai uitat parola")
+    LOGIN_BUTTON = (By.ID, '//*[@id="doLogin"]')
+    FORGOT_PASSWORD_LINK = (By.LINK_TEXT, "Ai uitat parola?")
     LOGIN_ERROR_MESSAGE = (By.XPATH, '//div[@class="message-error error message"]')
     EMPTY_EMAIL_ERROR = (By.XPATH, '//div[@id="credentials-error"]')
     EMPTY_PASS_ERROR = (By.XPATH, '//div[@id="pass-error"]')

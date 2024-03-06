@@ -2,7 +2,7 @@ Feature: Check the home page functionality
 
   Background:
     Given home: I am on home page
-    Given base: Close cookies popup
+    Given base: Accept cookies popup
 
   @test_home_page
     Scenario: Verify home page url
@@ -20,6 +20,6 @@ Feature: Check the home page functionality
       Then home: I hover over "<subcategory>"
 
     Examples:
-      | category              | subcategory |
-      | Rachete               | Wilson      |
-      | Mingi                 | Head        |
+      | category                        | subcategory |
+      | Tenis de camp                   | Rachete tenis |
+      | Tenis de camp                   | Mingi tenis de camp |

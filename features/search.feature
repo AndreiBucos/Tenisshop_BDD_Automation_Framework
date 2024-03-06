@@ -15,5 +15,3 @@ Feature: Tennis-Zone search feature
       | mingi    |
       | tricou   |
 
-      # pas nou: returnare rezultate pentru caturai
-  # cautarea unui produs dupa o sortare si verificarea sortarii (pret eg)

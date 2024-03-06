@@ -6,7 +6,10 @@ from time import sleep
 
 class Register_Page(Base_Page):
     EMAIL_INPUT = (By.ID, "pizokel_customer_register_email")
+    NUME_INPUT = (By.ID, "")
+    PRENUME_INPUT = (By.ID, "")
     PASSWORD_INPUT = (By.ID, "pizokel_customer_register_password")
+    CONFIRM_PASSWORD_INPUT = (By.ID, "pizokel_customer_register_password")
     TERMS_CHECKBOX = (By.CLASS_NAME, "register-checkbox-label")
     REGISTER_BUTTON = (By.ID, "pizokel_customer_register_submit")
     CREATED_ACCOUNT_ERROR_MESSAGE= (By.CSS_SELECTOR, "div[class='success-msg'] h4")

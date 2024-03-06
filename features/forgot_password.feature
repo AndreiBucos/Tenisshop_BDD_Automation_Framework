@@ -3,8 +3,7 @@ Feature: Check the Forgot password functionality
   Background:
 
     Given login: I am a user on the login page
-    #Given login: I click on the forgot password link
-    Given base: Close cookies popup
+    Given base: Accept cookies popup
     When  login: I click on the forgot password link
 
 

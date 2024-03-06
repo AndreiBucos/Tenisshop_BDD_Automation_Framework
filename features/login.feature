@@ -2,7 +2,7 @@ Feature: Check the Login functionality
 
   Background:
     Given login: I am a user on the login page
-    Given base: Close cookies popup
+    Given base: Accept cookies popup
 
   @login_test
   Scenario: Enter wrong credentials and check the error

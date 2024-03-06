@@ -25,6 +25,5 @@ class Searched_Products_Page(Browser):
         for element in title_list:
             title = element.text.lower()
             assert text in title, f'Result does not contain search query'
-            #de sters sleep-urile inutile
-            #de adaugat si o concluzie in proiect
+
 

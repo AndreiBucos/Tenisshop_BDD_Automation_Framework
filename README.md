@@ -1,6 +1,6 @@
 Tennis-Zone BDD Automation Framework
 
-<p>Site-ul testat: https://tennis-zone.ro/
+<p>Site-ul testat: https://tenisshop.ro/
 <p>Design pattern-ul folosit: Page Object Model</p>
 <p>Metodologia: Behavior Driven Development</p>
 

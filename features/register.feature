@@ -5,7 +5,9 @@ Feature: Check the register functionality
 
   @register_successfull
 Scenario: Enter correct credentials and create a new account
-    When register: I fill in an user "andrei.bucos@yahoo.com"
+    When register: I fill in an user "anndreiy_22m@yahoo.com"
+    When register: I fill in an user "anndreiy_22m@yahoo.com"
+    When register: I fill in a passwords "Caisa100"
     When register: I fill in a passwords "Caisa100"
     When register: I click on accept terms
     When register: I click the register_button
