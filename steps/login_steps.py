@@ -42,7 +42,6 @@ def step_impl(context):
 def step_impl(context):
     context.login_page.clean_password_field()
 
-
 @then('login: I verify the empty email error message "{msg}"')
 def step_impl(context, msg):
     context.login_page.empty_email_error_message(msg)

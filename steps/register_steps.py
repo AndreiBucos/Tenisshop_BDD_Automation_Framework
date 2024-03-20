@@ -1,17 +1,32 @@
 from behave import *
 
 @given ('register: I am a user on the register page')
-
 def step_impl(context):
     context.register_page.navigate_to_register_page()
 
-@when('register: I fill in an user "{user}"')
+@then('register: I click the register_button')
+def step_impl(context):
+    context.register_page.click_register_button()
+
+@when('register: I fill in an user email "{user}"')
 def step_impl(context,user):
     context.register_page.insert_email(user)
 
-@when('register: I fill in a passwords "{passwords}"')
+@when('register: I fill in a user last name "{lastmane}"')
+def step_impl(context,user):
+    context.register_page.insert_lastname(user)
+
+@when('register: I fill in a user first name "{firstname}"')
+def step_impl(context,user):
+    context.register_page.insert_firstname(user)
+
+@when('register: I fill in a user password "{passwords}"')
 def step_impl(context,passwords):
     context.register_page.insert_password(passwords)
+
+@when('register: I fill in a confirm user password "{passwords}"')
+def step_impl(context,passwords):
+    context.register_page.insert_confirmation_password(passwords)
 
 @when('register: I click on accept terms')
 def step_impl(context):

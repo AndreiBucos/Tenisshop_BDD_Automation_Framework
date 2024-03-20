@@ -6,8 +6,8 @@ from pages.base_page import Base_Page
 
 class HomePage(Base_Page):
     LOGO_IMG = (By.XPATH, '//*[@id="logo"]/img')
-    SEARCH_INPUT = (By.XPATH, '//*[@id="_autocompleteSearchMainHeader"]')
-    SEARCH_BTN = (By.XPATH, '//*[@id="_doSearch"]')
+    SEARCH_INPUT = (By.XPATH, '//a[@id="mobile-search"]')
+    SEARCH_BTN = (By.XPATH, '//i[@class="icon icon-fdux_search"]')
     MENU_BTN = (By.XPATH, '//*[@id="main-menu"]/div/ul')
 
     def navigate_to_home_page(self):

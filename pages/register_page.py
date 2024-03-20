@@ -5,13 +5,13 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
 class Register_Page(Base_Page):
-    EMAIL_INPUT = (By.ID, "pizokel_customer_register_email")
-    NUME_INPUT = (By.ID, "")
-    PRENUME_INPUT = (By.ID, "")
-    PASSWORD_INPUT = (By.ID, "pizokel_customer_register_password")
-    CONFIRM_PASSWORD_INPUT = (By.ID, "pizokel_customer_register_password")
-    TERMS_CHECKBOX = (By.CLASS_NAME, "register-checkbox-label")
-    REGISTER_BUTTON = (By.ID, "pizokel_customer_register_submit")
+    EMAIL_INPUT = (By.ID, "__emailRegister")
+    LASTNAME_INPUT = (By.ID, "__lastnameRegister")
+    FIRSTNAME_INPUT = (By.ID, "__firstnameRegister")
+    PASSWORD_INPUT = (By.ID, "__passwordRegister")
+    CONFIRM_PASSWORD_INPUT = (By.ID, "__confirmPasswordRegister")
+    TERMS_CHECKBOX = (By.XPATH, '//input[@name="agreePersonalInformation"]')
+    REGISTER_BUTTON = (By.XPATH, '//*[@id="doRegister"]')
     CREATED_ACCOUNT_ERROR_MESSAGE= (By.CSS_SELECTOR, "div[class='success-msg'] h4")
 
     def navigate_to_register_page(self):
@@ -21,8 +21,18 @@ class Register_Page(Base_Page):
     def insert_email(self, user):
         self.driver.find_element(*self.EMAIL_INPUT).send_keys(user)
 
+
+    def insert_lastname(self, user):
+       self.driver.find_element(*self.LASTNAME_INPUT).send_keys(user)
+
+    def insert_firstname(self, user):
+       self.driver.find_element(*self.FIRSTNAME_INPUT).send_keys(user)
+
     def insert_password(self,passwords):
         self.driver.find_element(*self.PASSWORD_INPUT).send_keys(passwords)
+
+    def insert_confirmation_password(self, passwords):
+        self.driver.find_element(*self.CONFIRM_PASSWORD_INPUT).send_keys(passwords)
 
     def click_accept_terms(self):
         self.driver.find_element(*self.TERMS_CHECKBOX).click()

@@ -48,6 +48,7 @@ class LoginPage(Base_Page):
     def clean_password_field(self):
         self.driver.find_element(*self.PASSWORD_INPUT).clear()
 
+    # de modificat cat sa apeleze noua metoda din base page
     def empty_email_error_message(self, expected_message):
         sleep(3)
         try:
@@ -57,6 +58,7 @@ class LoginPage(Base_Page):
 
         assert actual_message == expected_message, f'Error, the message is incorrect'
 
+    # de modificat cat sa apeleze noua metoda din base page
     def empty_password_error_message(self, expected_message):
         sleep(3)
         try:
