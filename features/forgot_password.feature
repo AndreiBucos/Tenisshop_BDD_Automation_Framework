@@ -12,10 +12,9 @@ Feature: Check the Forgot password functionality
     Then forgot_pass: I verify that I receive the correct error message "<expected_error>"
 
   Examples:
-    | email          | expected_error                                          |  |
-    | test           | - Adresa de email este invalida.                        |  |
-    | my_email@      | - Adresa de email este invalida.                        |  |
-    | N/A            | Acesta este un camp obligatoriu.                        |  |
-    | test@gmail.com | - Adresa de email nu este inregistrata in baza de date. |  |
-
+    | email          | expected_error                                          |
+    | test           | - Adresa de email este invalida.                        |
+    | my_email@      | - Adresa de email este invalida.                        |
+    | N/A            | Acesta este un camp obligatoriu.                        |
+    | test@gmail.com | - Adresa de email nu este inregistrata in baza de date. |
 

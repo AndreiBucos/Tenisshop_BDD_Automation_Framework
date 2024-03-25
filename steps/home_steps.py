@@ -9,6 +9,7 @@ def step_impl(context):
 @then('home: Check the url to be "{url}"')
 def step_impl(context, url):
     context.home_page.verify_page_url(url)
+    context.register_page.click_logout_button()
 
 
 @when('home: I click tenisshop logo')

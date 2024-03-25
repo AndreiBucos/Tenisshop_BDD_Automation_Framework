@@ -1,6 +1,6 @@
 Tennis-Zone BDD Automation Framework
 
-<p>Site-ul testat: https://tenisshop.ro/
+<p>Site-ul testat: https://tennis-zone.ro//
 <p>Design pattern-ul folosit: Page Object Model</p>
 <p>Metodologia: Behavior Driven Development</p>
 
@@ -9,7 +9,7 @@ Tennis-Zone BDD Automation Framework
 3.	Instalați Python https://www.python.org/downloads/
 
 Pentru a clona/importa proiectul:
-1.	Descărcați GIT: https://git-scm.com/downloads
+1.	Descărcați GIT: https://github.com/AndreiBucos/Tenisshop_BDD_Automation_Framework.git
 2.	Deschideți folderul unde doriți să clonați proiectul, dați click dreapta, selectați ”Git Bash Here”
 3.	In fereastra deschisă, dați „paste” la urmatorea comandă:
 git clone h

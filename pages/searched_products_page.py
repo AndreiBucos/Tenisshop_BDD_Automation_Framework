@@ -5,18 +5,21 @@ from pages.base_page import Base_Page
 
 class Searched_Products_Page(Browser):
 
-    SEARCH_INPUT_BOX = (By.XPATH, '//a[@id="_autocompleteSearchMainHeader"]')
     SEARCH_BUTTON = (By.XPATH, '//i[@class="fa fa-search"]')
     RESULTS_TITLE = (By.CSS_SELECTOR, '.search-results-title')
+    INPUT_BOX = (By.ID,'_autocompleteSearchMainHeader')
 
 
     def navigate_to_home_page(self):
         sleep(3)
         self.driver.get('https://tenisshop.ro/')
 
-    def search_after(self):
-        sleep(1)
-        self.driver.find_element(*self.SEARCH_INPUT_BOX).send_keys(query)
+    def click_search_input_box(self):
+        self.driver.find_element(*self.INPUT_BOX).click()
+
+
+    def search_after(self,query):
+        self.driver.find_element(*self.INPUT_BOX).send_keys(query)
 
     def click_search_button(self):
         self.driver.find_element(*self.SEARCH_BUTTON).click()
